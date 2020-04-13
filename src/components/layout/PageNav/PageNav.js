@@ -1,13 +1,15 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
+import Button from '@material-ui/core/Button';
+
 
 const PageNav = ({ props }) => (
   <nav>
-    <NavLink exact to={`${process.env.PUBLIC_URL}/`} activeClassName='active'>Home</NavLink>
-    <NavLink to={`${process.env.PUBLIC_URL}/login`}>Login</NavLink>
-    <NavLink to={`${process.env.PUBLIC_URL}/tables`}>Tables</NavLink>
-    <NavLink to={`${process.env.PUBLIC_URL}/ordering`}>Ordering</NavLink>
-    <NavLink to={`${process.env.PUBLIC_URL}/kitchen`}>Kitchen</NavLink>
+    <Button variant="contained" color="primary"><NavLink exact to={`${process.env.PUBLIC_URL}/`} activeClassName='active' style={{ color: 'inherit', textDecoration: 'inherit'}}>Home</NavLink></Button>
+    <Button variant="contained" color="primary"><NavLink to={`${process.env.PUBLIC_URL}/login`} style={{ color: 'inherit', textDecoration: 'inherit'}}>Login</NavLink></Button>
+    <Button variant="contained" color="primary"><NavLink to={`${process.env.PUBLIC_URL}/tables`} style={{ color: 'inherit', textDecoration: 'inherit'}}>Tables</NavLink></Button>
+    <Button variant="contained" color="primary"><NavLink to={`${process.env.PUBLIC_URL}/ordering`} style={{ color: 'inherit', textDecoration: 'inherit'}}>Ordering</NavLink></Button>
+    <Button variant="contained" color="primary"><NavLink to={`${process.env.PUBLIC_URL}/kitchen`} style={{ color: 'inherit', textDecoration: 'inherit'}}>Kitchen</NavLink></Button>
   </nav>
 );
 
